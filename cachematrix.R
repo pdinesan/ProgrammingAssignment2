@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Matrix inversion and caching
 
-## Write a short comment describing this function
+## makeCacheMatrix takes an argument of type matrix and
+## returns an object with associated functions to get and set the date of the Matrix
 
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
@@ -17,7 +17,8 @@ list(set = set, get = get,
      getInverse = getInverse)
 }
 
-## Write a short comment describing this function
+## cacheSolve checks if the incoming object already has a cached data, if yes, it will return the cached inverse of the matrix
+## else it will inverse the matrix and store in the cache
 
 cacheSolve <- function(x, ...) {
     Invmat <- x$getInverse()
